@@ -1,0 +1,37 @@
+//This was made using visual studio 2019!
+using System;
+
+namespace _3n_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Int64 nb, v, i=0;
+            Console.Write("Insert a number: ");
+            nb = Int64.Parse(Console.ReadLine());
+            v = nb;
+            while (v != 1)
+            {
+                if (v % 2 == 0)
+                {
+                    Int64 v1 = v;
+                    v = v / 2;
+                    Console.WriteLine(v1 + " / 2 = " + v);
+                    i++;
+                }
+                else
+                {
+                    Int64 v1 = v;
+                    v = v * 3 + 1;
+                    Console.WriteLine(v1 + " x(*) 3 + 1= " + v);
+                    i++;
+                }
+            }
+            Console.WriteLine("Loop(End)");
+            Console.WriteLine("There were " + i + " diferent values using number " + nb + " before a loop.");
+            Console.ReadKey();
+        }
+    }
+}
